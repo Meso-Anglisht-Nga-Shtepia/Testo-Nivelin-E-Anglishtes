@@ -6,8 +6,9 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
-    color: #333;
+    /* Replace background gradient with image */
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
   }
