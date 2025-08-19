@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+  <meta name="google-site-verification" content="j8wJCiLTFIvrqtx81YIfZVDvnhBW1qAJKeBwV2fFPUo" />
 <title>ESL Placement Test</title>
 <style>
   footer, .site-footer, .footer {
