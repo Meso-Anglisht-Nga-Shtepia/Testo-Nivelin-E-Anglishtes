@@ -167,7 +167,7 @@ const quizData = [
   {question: "If only he ___ listened to the advice given.", options:["had","have","has","haved","having"], correct:0},
   {question: "Hardly ___ I entered the room when everyone started applauding.", options:["had","have","has","having","was"], correct:0}
 ];
-  
+
 let currentQuestion = 0;
 let score = 0;
 
@@ -176,7 +176,6 @@ const quizBox = document.getElementById("quiz-box");
 const questionContainer = document.getElementById("question-container");
 const progressBar = document.getElementById("progress-bar");
 const resultBox = document.getElementById("result");
-const navBox = document.getElementById("nav-box");
 
 function startQuiz() {
   infoBox.style.display = "none";
@@ -187,7 +186,6 @@ function startQuiz() {
 function loadQuestion() {
   if (currentQuestion >= quizData.length) {
     quizBox.style.display = "none";
-    resultBox.style.display = "block"; // show results
     showLevel();
     return;
   }
@@ -197,6 +195,28 @@ function loadQuestion() {
     <div class="question">${currentQuestion + 1}. ${q.question}</div>
     ${q.options.map((opt, i) => `<div class="option" onclick="checkAnswer(${i})">${opt}</div>`).join('')}
   `;
+}
+
+function checkAnswer(selected) {
+  let q = quizData[currentQuestion];
+  let options = document.querySelectorAll(".option");
+  options.forEach((btn, idx) => {
+    btn.style.pointerEvents = "none";
+    if (idx === q.correct) btn.classList.add("correct");
+    else if (idx === selected) btn.classList.add("wrong");
+  });
+  if (selected === q.correct) score++;
+  nextQuestion();
+}
+
+function skipQuestion() {
+  nextQuestion();
+}
+
+function nextQuestion() {
+  currentQuestion++;
+  progressBar.style.width = (currentQuestion / quizData.length * 100) + "%";
+  setTimeout(loadQuestion, 500);
 }
 
 function showLevel() {
@@ -211,7 +231,19 @@ function showLevel() {
   
   resultBox.innerHTML = `
     🎉 Your English level is: <strong>${level}</strong><br>
-    You answered ${score} out of ${quizData.length} questions correctly.
+    You answered ${score} out of ${quizData.length} questions correctly.<br><br>
+    <button onclick="restartQuiz()">Restart Quiz</button>
   `;
-  resultBox.style.display = "block"; // make sure it's visible
+  resultBox.style.display = "block";
 }
+
+function restartQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  resultBox.style.display = "none";
+  infoBox.style.display = "block";
+  progressBar.style.width = "0%";
+}
+</script>
+</body>
+</html>
