@@ -19,7 +19,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: url("12.jpg") no-repeat center center fixed;
+      background: url("image.jpg") no-repeat center center fixed;
       background-size: cover;
       margin: 0;
       padding: 0;
