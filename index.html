@@ -18,6 +18,8 @@
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     overflow: hidden;
+    position: relative;
+    padding-bottom: 80px; /* space for bottom box */
   }
   #info, #quiz-box, #result {
     padding: 30px;
@@ -50,11 +52,21 @@
     border-radius: 10px;
     transition: width 0.3s;
   }
-  button { padding: 12px 25px; font-size: 16px; cursor: pointer; border-radius: 8px; border: none; background: #2193b0; color: white; transition: 0.3s; }
+  button { padding: 12px 25px; font-size: 16px; cursor: pointer; border-radius: 8px; border: none; background: #2193b0; color: white; transition: 0.3s; margin: 5px;}
   button:hover { background: #6dd5ed; color: #000; }
-footer, .site-footer {
-  display: none !important;
-}
+
+  /* Bottom navigation box */
+  #nav-box {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  footer, .site-footer {
+    display: none !important;
+  }
 </style>
 </head>
 <body>
@@ -63,7 +75,7 @@ footer, .site-footer {
   <div id="info">
     <h2>Welcome to the ESL Placement Test</h2>
     <p>You will be presented with 100 multiple-choice questions to determine your English level (A1–C2).<br>
-    You can only move forward. Once you select an answer, you cannot go back.<br>
+    You can skip questions or move forward, but you cannot go back.<br>
     Correct answers will turn green, incorrect answers will turn red.<br>
     Your progress will be shown below as a progress bar.<br>
     At the end, you will see your English level based on your results.<br>
@@ -79,7 +91,11 @@ footer, .site-footer {
   <div id="result" style="display:none;"></div>
 </div>
 
-<script>
+<!-- Bottom navigation -->
+<div id="nav-box" style="display:none;">
+  <button onclick="skipQuestion()">Skip</button>
+</div>
+
 const quizData = [
   {question: "What’s your name?", options: ["I name John","My name John","My name is John","I’m name John","Name is John"], correct:2},
   {question: "I ___ a student.", options: ["is","are","am","be","being"], correct:2},
@@ -187,3 +203,4 @@ function showLevel() {
 </script>
 </body>
 </html>
+
