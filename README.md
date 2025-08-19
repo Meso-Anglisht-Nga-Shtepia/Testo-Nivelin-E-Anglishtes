@@ -1,11 +1,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <meta name="google-site-verification" content="j8wJCiLTFIvrqtx81YIfZVDvnhBW1qAJKeBwV2fFPUo" />
-<title>ESL Placement Test</title>
-<style>
-  footer, .site-footer, .footer {
-  display: none !important;
+<title>ESL Placement Test | Test Vendosjeje në Anglisht</title>
+
+<!-- English Meta Tags -->
+<meta name="description" content="Free ESL placement test with 100 multiple-choice questions. Find your English level from A1 (Beginner) to C2 (Proficient).">
+<meta name="keywords" content="ESL test, English placement test, English quiz, A1 C2 levels, free English test, language test">
+<meta name="author" content="Your Name or Website">
+<meta property="og:title" content="ESL Placement Test - Check Your English Level">
+<meta property="og:description" content="Take our free ESL placement test and discover your English level from A1 to C2.">
+
+<!-- Albanian Meta Tags -->
+<meta name="description" lang="sq" content="Test falas i vendosjes në anglisht me 100 pyetje me zgjedhje të shumëfishta. Zbulo nivelin tënd të anglishtes nga A1 (Fillestar) deri te C2 (I avancuar).">
+<meta name="keywords" lang="sq" content="test anglishte, test vendosjeje, quiz anglishte, nivelet A1 C2, test falas gjuhe, testim i gjuhës">
+<meta property="og:title" lang="sq" content="Test Vendosjeje në Anglisht - Kontrollo Nivelin Tënd">
+<meta property="og:description" lang="sq" content="Merr pjesë në testin falas të vendosjes në anglisht dhe zbulo nivelin tënd nga A1 në C2.">
+
+<!-- Robots and Social -->
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:image" content="URL-to-an-image.jpg">
+<meta property="og:url" content="https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/">
 }
  body {
   font-family: Arial, sans-serif;
