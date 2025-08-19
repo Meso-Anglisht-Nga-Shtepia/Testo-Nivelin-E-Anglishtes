@@ -2,26 +2,20 @@
 <head>
 <meta charset="UTF-8">
 <title>ESL Placement Test | Test Vendosjeje në Anglisht</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- English Meta Tags -->
-<meta name="description" content="Free ESL placement test with 100 multiple-choice questions. Find your English level from A1 (Beginner) to C2 (Proficient).">
-<meta name="keywords" content="ESL test, English placement test, English quiz, A1 C2 levels, free English test, language test">
-<meta name="author" content="Your Name or Website">
-<meta property="og:title" content="ESL Placement Test - Check Your English Level">
-<meta property="og:description" content="Take our free ESL placement test and discover your English level from A1 to C2.">
+  <!-- English Meta Tags -->
+  <meta name="description" content="Free ESL Placement Test - Check your English level online with our simple quiz. Suitable for beginners, intermediate, and advanced learners.">
+  <meta name="keywords" content="ESL test, English placement test, online English quiz, learn English, free English test, English levels">
+  <meta name="author" content="Your Name or Organization">
 
-<!-- Albanian Meta Tags -->
-<meta name="description" lang="sq" content="Test falas i vendosjes në anglisht me 100 pyetje me zgjedhje të shumëfishta. Zbulo nivelin tënd të anglishtes nga A1 (Fillestar) deri te C2 (I avancuar).">
-<meta name="keywords" lang="sq" content="test anglishte, test vendosjeje, quiz anglishte, nivelet A1 C2, test falas gjuhe, testim i gjuhës">
-<meta property="og:title" lang="sq" content="Test Vendosjeje në Anglisht - Kontrollo Nivelin Tënd">
-<meta property="og:description" lang="sq" content="Merr pjesë në testin falas të vendosjes në anglisht dhe zbulo nivelin tënd nga A1 në C2.">
-
-<!-- Robots and Social -->
-<meta name="robots" content="index, follow">
-<meta property="og:type" content="website">
-<meta property="og:image" content="URL-to-an-image.jpg">
-<meta property="og:url" content="https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/">
-}
+  <!-- Albanian Meta Tags -->
+  <meta name="description" lang="sq" content="Test falas i vendosjes së gjuhës angleze - Kontrollo nivelin tënd të anglishtes me një kuiz të thjeshtë online. I përshtatshëm për fillestarë, nivel të mesëm dhe të avancuar.">
+  <meta name="keywords" lang="sq" content="test anglishte, test vendosjeje, kuiz anglishte online, mëso anglisht, test falas, nivelet e anglishtes">
+  <meta name="author" content="Emri juaj ose Organizata juaj">
+</head>
 body {
   font-family: Arial, sans-serif;
   background: url("image.jpg") no-repeat center center fixed;
