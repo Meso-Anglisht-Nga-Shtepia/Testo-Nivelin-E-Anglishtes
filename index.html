@@ -208,6 +208,7 @@ const questionContainer = document.getElementById("question-container");
 const progressBar = document.getElementById("progress-bar");
 const resultBox = document.getElementById("result");
 const navBox = document.getElementById("nav-box");
+
 function startQuiz() {
   infoBox.style.display = "none";
   quizBox.style.display = "block";
@@ -225,8 +226,10 @@ function loadQuestion() {
   }
 
   let q = quizData[currentQuestion];
-  questionContainer.innerHTML = `<div class="question">${currentQuestion+1}. ${q.question}</div>
-    ${q.options.map((opt,i)=>`<div class="option" onclick="checkAnswer(${i})">${opt}</div>`).join("")}`;
+  questionContainer.innerHTML = `
+    <div class="question">${currentQuestion + 1}. ${q.question}</div>
+    ${q.options.map((opt, i) => `<div class="option" onclick="checkAnswer(${i})">${opt}</div>`).join('')}
+  `;
 }
 
 function checkAnswer(selected) {
@@ -234,10 +237,10 @@ function checkAnswer(selected) {
   let options = document.querySelectorAll(".option");
   options.forEach((btn, idx) => {
     btn.style.pointerEvents = "none";
-    if(idx === q.correct) btn.classList.add("correct");
-    else if(idx === selected) btn.classList.add("wrong");
+    if (idx === q.correct) btn.classList.add("correct");
+    else if (idx === selected) btn.classList.add("wrong");
   });
-  if(selected === q.correct) score++;
+  if (selected === q.correct) score++;
   nextQuestion();
 }
 
@@ -247,22 +250,23 @@ function skipQuestion() {
 
 function nextQuestion() {
   currentQuestion++;
-  progressBar.style.width = (currentQuestion/quizData.length*100) + "%";
+  progressBar.style.width = (currentQuestion / quizData.length * 100) + "%";
   setTimeout(loadQuestion, 500);
 }
 
 function showLevel() {
-  let percent = (score/quizData.length) * 100;
+  let percent = (score / quizData.length) * 100;
   let level;
-  if(percent <= 20) level = "A1 (Beginner)";
-  else if(percent <= 40) level = "A2 (Elementary)";
-  else if(percent <= 60) level = "B1 (Intermediate)";
-  else if(percent <= 80) level = "B2 (Upper-Intermediate)";
-  else if(percent <= 90) level = "C1 (Advanced)";
+  if (percent <= 20) level = "A1 (Beginner)";
+  else if (percent <= 40) level = "A2 (Elementary)";
+  else if (percent <= 60) level = "B1 (Intermediate)";
+  else if (percent <= 80) level = "B2 (Upper-Intermediate)";
+  else if (percent <= 90) level = "C1 (Advanced)";
   else level = "C2 (Proficient)";
   resultBox.innerHTML = `🎉 Your English level is: <strong>${level}</strong> (${score}/${quizData.length})`;
 }
 </script>
 </body>
 </html>
+
 
