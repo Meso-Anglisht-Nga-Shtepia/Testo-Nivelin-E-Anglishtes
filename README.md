@@ -25,7 +25,6 @@
       padding: 0;
       color: #333;
     }
-
     /* Optional overlay for better readability */
     body::before {
       content: "";
