@@ -8,7 +8,7 @@
 }
  body {
   font-family: Arial, sans-serif;
-  background: url"12.jpg"no-repeat center center fixed;
+  background: url("image.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #333;
   margin: 0;
