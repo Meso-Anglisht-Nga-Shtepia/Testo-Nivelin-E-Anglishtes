@@ -3,6 +3,9 @@
 <meta charset="UTF-8">
 <title>ESL Placement Test</title>
 <style>
+  footer, .site-footer, .footer {
+  display: none !important;
+}
   body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #6dd5ed, #2193b0);
