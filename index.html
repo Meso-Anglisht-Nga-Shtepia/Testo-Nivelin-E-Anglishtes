@@ -146,7 +146,6 @@ const quizData = [
   {question: "The manager made us ___ longer hours.", options:["work","working","to work","worked","works"], correct:0},
   // For brevity, only partial quiz included, continue adding all 100 questions in same format...
 ];
-
 let currentQuestion = 0;
 let score = 0;
 
@@ -155,16 +154,19 @@ const quizBox = document.getElementById("quiz-box");
 const questionContainer = document.getElementById("question-container");
 const progressBar = document.getElementById("progress-bar");
 const resultBox = document.getElementById("result");
+const navBox = document.getElementById("nav-box");
 
 function startQuiz() {
   infoBox.style.display = "none";
   quizBox.style.display = "block";
+  navBox.style.display = "block";
   loadQuestion();
 }
 
 function loadQuestion() {
   if (currentQuestion >= quizData.length) {
     quizBox.style.display = "none";
+    navBox.style.display = "none";
     resultBox.style.display = "block";
     showLevel();
     return;
@@ -184,9 +186,17 @@ function checkAnswer(selected) {
     else if(idx === selected) btn.classList.add("wrong");
   });
   if(selected === q.correct) score++;
+  nextQuestion();
+}
+
+function skipQuestion() {
+  nextQuestion();
+}
+
+function nextQuestion() {
   currentQuestion++;
   progressBar.style.width = (currentQuestion/quizData.length*100) + "%";
-  setTimeout(loadQuestion, 800);
+  setTimeout(loadQuestion, 500);
 }
 
 function showLevel() {
@@ -203,4 +213,3 @@ function showLevel() {
 </script>
 </body>
 </html>
-
