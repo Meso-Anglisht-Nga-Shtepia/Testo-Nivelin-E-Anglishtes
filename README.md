@@ -22,7 +22,8 @@
 <meta property="og:image" content="URL-to-an-image.jpg">
 <meta property="og:url" content="https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/">
 }
- body {
+<meta name="google-site-verification" content="j8wJCiLTFIvrqtx81YIfZVDvnhBW1qAJKeBwV2fFPUo" 
+ /> body {
   font-family: Arial, sans-serif;
   background: url("image.jpg") no-repeat center center fixed;
   background-size: cover;
