@@ -52,6 +52,9 @@
   }
   button { padding: 12px 25px; font-size: 16px; cursor: pointer; border-radius: 8px; border: none; background: #2193b0; color: white; transition: 0.3s; }
   button:hover { background: #6dd5ed; color: #000; }
+footer, .site-footer {
+  display: none !important;
+}
 </style>
 </head>
 <body>
