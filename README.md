@@ -8,10 +8,11 @@
 }
   body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
-    color: #333;
-    margin: 0;
-    padding: 0;
+    background: url("12.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  padding: 0;
   }
   #container {
     max-width: 800px;
