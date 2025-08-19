@@ -186,8 +186,7 @@ const quizData = [
   {question: "I wish I ___ spoken to him earlier.", options:["had","have","has","haved","having"], correct:0},
 
   // C2 (Proficient) 86-100
-  {question: "The manager demanded that the report ___ immediately.", options:["be submitted","is submitted","submitted","submits","was submitted"], correct:0},
-  {question
+   {question: "The manager demanded that the report ___ immediately.", options:["be submitted","is submitted","submitted","submits","was submitted"], correct:0}
 ];
 
 let currentQuestion = 0;
