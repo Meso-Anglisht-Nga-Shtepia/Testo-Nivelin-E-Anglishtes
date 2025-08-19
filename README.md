@@ -86,7 +86,6 @@
 
   <div id="result" style="display:none;"></div>
 </div>
-
 <script>
 const quizData = [
   // A1 (Beginner) 1-15
