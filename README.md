@@ -1,10 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>ESL Placement Test | Test Vendosjeje në Anglisht</title>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESL Placement Test | Test Vendosjeje në Anglisht</title>
 
   <!-- English Meta Tags -->
   <meta name="description" content="Free ESL Placement Test - Check your English level online with our simple quiz. Suitable for beginners, intermediate, and advanced learners.">
@@ -15,67 +14,102 @@
   <meta name="description" lang="sq" content="Test falas i vendosjes së gjuhës angleze - Kontrollo nivelin tënd të anglishtes me një kuiz të thjeshtë online. I përshtatshëm për fillestarë, nivel të mesëm dhe të avancuar.">
   <meta name="keywords" lang="sq" content="test anglishte, test vendosjeje, kuiz anglishte online, mëso anglisht, test falas, nivelet e anglishtes">
   <meta name="author" content="Emri juaj ose Organizata juaj">
-</head>
-body {
-  font-family: Arial, sans-serif;
-  background: url("image.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-  #container {
-    max-width: 800px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
-  }
-  #info, #quiz-box, #result {
-    padding: 30px;
-    text-align: center;
-  }
-  h2 { margin-bottom: 20px; }
-  .option {
-    display: block;
-    background: #f0f0f0;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .option:hover { background: #e0e0e0; }
-  .correct { background: #4CAF50; color: #fff; }
-  .wrong { background: #f44336; color: #fff; }
-  #progress-container {
-    width: 90%;
-    background: #ddd;
-    height: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-  }
-  #progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #4CAF50;
-    border-radius: 10px;
-    transition: width 0.3s;
-  }
-  button { 
-    padding: 12px 25px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    border-radius: 8px; 
-    border: none; 
-    background: #2193b0; 
-    color: white; 
-    transition: 0.3s; 
-    margin-top: 10px;
-  }
-  button:hover { background: #6dd5ed; color: #000; }
-</style>
+
+  <!-- CSS Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("12.jpg") no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Optional overlay for better readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: -1;
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    #info, #quiz-box, #result {
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .option {
+      display: block;
+      background: #f0f0f0;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .option:hover { 
+      background: #e0e0e0; 
+    }
+
+    .correct { 
+      background: #4CAF50; 
+      color: #fff; 
+    }
+
+    .wrong { 
+      background: #f44336; 
+      color: #fff; 
+    }
+
+    #progress-container {
+      width: 90%;
+      background: #ddd;
+      height: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: #4CAF50;
+      border-radius: 10px;
+      transition: width 0.3s;
+    }
+
+    button { 
+      padding: 12px 25px; 
+      font-size: 16px; 
+      cursor: pointer; 
+      border-radius: 8px; 
+      border: none; 
+      background: #2193b0; 
+      color: white; 
+      transition: 0.3s; 
+      margin-top: 10px;
+    }
+
+    button:hover { 
+      background: #6dd5ed; 
+      color: #000; 
+    }
+  </style>
 </head>
 <body>
 
@@ -96,7 +130,6 @@ body {
     <button id="skipBtn" onclick="skipQuestion()">Skip Question</button>
     <div id="progress-container"><div id="progress-bar"></div></div>
   </div>
-
   <div id="result" style="display:none;"></div>
 </div>
 <script>
