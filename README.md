@@ -6,7 +6,6 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    /* Replace background gradient with image */
     background: url('image.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
