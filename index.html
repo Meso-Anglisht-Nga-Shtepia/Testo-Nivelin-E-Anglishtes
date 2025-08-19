@@ -231,7 +231,6 @@ const navBox = document.getElementById("nav-box");
 function startQuiz() {
   infoBox.style.display = "none";
   quizBox.style.display = "block";
-  navBox.style.display = "block";
   loadQuestion();
 }
 
@@ -239,7 +238,6 @@ function loadQuestion() {
   if (currentQuestion >= quizData.length) {
     quizBox.style.display = "none";
     navBox.style.display = "none";
-    resultBox.style.display = "block";
     showLevel();
     return;
   }
@@ -287,6 +285,7 @@ function showLevel() {
 </script>
 </body>
 </html>
+
 
 
 
