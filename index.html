@@ -187,7 +187,7 @@ function startQuiz() {
 function loadQuestion() {
   if (currentQuestion >= quizData.length) {
     quizBox.style.display = "none";
-    navBox.style.display = "none";
+    resultBox.style.display = "block"; // show results
     showLevel();
     return;
   }
@@ -199,28 +199,6 @@ function loadQuestion() {
   `;
 }
 
-function checkAnswer(selected) {
-  let q = quizData[currentQuestion];
-  let options = document.querySelectorAll(".option");
-  options.forEach((btn, idx) => {
-    btn.style.pointerEvents = "none";
-    if (idx === q.correct) btn.classList.add("correct");
-    else if (idx === selected) btn.classList.add("wrong");
-  });
-  if (selected === q.correct) score++;
-  nextQuestion();
-}
-
-function skipQuestion() {
-  nextQuestion();
-}
-
-function nextQuestion() {
-  currentQuestion++;
-  progressBar.style.width = (currentQuestion / quizData.length * 100) + "%";
-  setTimeout(loadQuestion, 500);
-}
-
 function showLevel() {
   let percent = (score / quizData.length) * 100;
   let level;
@@ -230,17 +208,10 @@ function showLevel() {
   else if (percent <= 80) level = "B2 (Upper-Intermediate)";
   else if (percent <= 90) level = "C1 (Advanced)";
   else level = "C2 (Proficient)";
-  resultBox.innerHTML = `🎉 Your English level is: <strong>${level}</strong> (${score}/${quizData.length})`;
+  
+  resultBox.innerHTML = `
+    🎉 Your English level is: <strong>${level}</strong><br>
+    You answered ${score} out of ${quizData.length} questions correctly.
+  `;
+  resultBox.style.display = "block"; // make sure it's visible
 }
-</script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
