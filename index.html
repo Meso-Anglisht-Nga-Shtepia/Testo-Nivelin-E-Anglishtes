@@ -1,95 +1,116 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ESL Placement Test</title>
-<meta name="google-site-verification" content="j8wJCiLTFIvrqtx81YIfZVDvnhBW1qAJKeBwV2fFPUo" />
+  <meta charset="UTF-8">
+  <title>ESL Placement Test</title>
+  <meta name="google-site-verification" content="j8wJCiLTFIvrqtx81YIfZVDvnhBW1qAJKeBwV2fFPUo" />
 
   <!-- Meta Tags in English -->
-<meta name="description" content="Free ESL Placement Test. Check your English level from A1 to C2 with this interactive quiz.">
-<meta name="keywords" content="English test, ESL placement, online quiz, English levels, A1, A2, B1, B2, C1, C2">
-<meta name="author" content="Your Name or Website">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free ESL Placement Test. Check your English level from A1 to C2 with this interactive quiz.">
+  <meta name="keywords" content="English test, ESL placement, online quiz, English levels, A1, A2, B1, B2, C1, C2">
+  <meta name="author" content="Your Name or Website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Meta Tags in Albanian -->
-<meta name="description" lang="sq" content="Test vendosjeje në anglisht. Kontrollo nivelin tënd të anglishtes nga A1 deri në C2 me këtë quiz interaktiv.">
-<meta name="keywords" lang="sq" content="testo nivelin e gjuhes angleze, test vendosjeje, quiz online, nivelet e anglishtes, A1, A2, B1, B2, C1, C2">
-<meta name="author" content="Emri ose faqja juaj">
-  
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: url('image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-  }
-  #container {
-    max-width: 800px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 80px;
-  }
-  #info, #quiz-box, #result {
-    padding: 30px;
-    text-align: center;
-  }
-  h2 { margin-bottom: 20px; }
-  .option {
-    display: block;
-    background: #f0f0f0;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .option:hover { background: #e0e0e0; }
-  .correct { background: #4CAF50; color: #fff; }
-  .wrong { background: #f44336; color: #fff; }
-  #progress-container {
-    width: 90%;
-    background: #ddd;
-    height: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-  }
-  #progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #4CAF50;
-    border-radius: 10px;
-    transition: width 0.3s;
-  }
-  button {
-    padding: 12px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    border: none;
-    background: #2193b0;
-    color: white;
-    transition: 0.3s;
-    margin: 5px;
-  }
-  button:hover { background: #6dd5ed; color: #000; }
-  #skip-btn {
-    margin-top: 15px;
-    background: #f39c12;
-    color: white;
-  }
-  #skip-btn:hover {
-    background: #e67e22;
-    color: black;
-  }
-  footer, .site-footer {
-    display: none !important;
-  }
-</style>
+  <!-- Meta Tags in Albanian -->
+  <meta name="description" lang="sq" content="Test vendosjeje në anglisht. Kontrollo nivelin tënd të anglishtes nga A1 deri në C2 me këtë quiz interaktiv.">
+  <meta name="keywords" lang="sq" content="testo nivelin e gjuhes angleze, test vendosjeje, quiz online, nivelet e anglishtes, A1, A2, B1, B2, C1, C2">
+  <meta name="author" content="Emri ose faqja juaj">
+
+  <!-- Social preview (Open Graph + Twitter) -->
+  <!-- IMPORTANT: make sure the image exists at this exact URL (case-sensitive).
+       File name has a space -> must be URL-encoded as %20 -->
+  <link rel="canonical" href="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/" />
+  <meta property="og:title" content="ESL Placement Test" />
+  <meta property="og:description" content="Free ESL Placement Test — 50 questions across A1–C2. Instant score + level." />
+  <meta property="og:url" content="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sq_AL" />
+  <meta property="og:image" content="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/vocabulary%20quiz.jpg" />
+  <meta property="og:image:secure_url" content="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/vocabulary%20quiz.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="ESL Placement Test — A1 to C2" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ESL Placement Test" />
+  <meta name="twitter:description" content="Free ESL Placement Test — 50 questions across A1–C2. Instant score + level." />
+  <meta name="twitter:image" content="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/vocabulary%20quiz.jpg" />
+  <meta name="twitter:image:alt" content="ESL Placement Test — A1 to C2" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 80px;
+    }
+    #info, #quiz-box, #result {
+      padding: 30px;
+      text-align: center;
+    }
+    h2 { margin-bottom: 20px; }
+    .option {
+      display: block;
+      background: #f0f0f0;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .option:hover { background: #e0e0e0; }
+    .correct { background: #4CAF50; color: #fff; }
+    .wrong { background: #f44336; color: #fff; }
+    #progress-container {
+      width: 90%;
+      background: #ddd;
+      height: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: #4CAF50;
+      border-radius: 10px;
+      transition: width 0.3s;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background: #2193b0;
+      color: white;
+      transition: 0.3s;
+      margin: 5px;
+    }
+    button:hover { background: #6dd5ed; color: #000; }
+    #skip-btn {
+      margin-top: 15px;
+      background: #f39c12;
+      color: white;
+    }
+    #skip-btn:hover {
+      background: #e67e22;
+      color: black;
+    }
+    footer, .site-footer {
+      display: none !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -117,6 +138,11 @@
 </div>
 
 <script>
+/* ====== GOOGLE SHEETS CONFIG (ADD YOUR URL) ======
+   Replace with your Apps Script Web App URL (must end with /exec) */
+const SHEET_WEB_APP_URL = "PASTE_YOUR_WEB_APP_URL_HERE";
+
+/* ====== QUIZ DATA (UNCHANGED) ====== */
 const quizData = [
   // A1 (Beginner) 1-8
   {question: "What’s your name?", options: ["I name John","My name John","My name is John","I’m name John","Name is John"], correct:2},
@@ -184,13 +210,29 @@ const quizData = [
 let currentQuestion = 0;
 let score = 0;
 
+/* NEW: minimal additions to collect data without changing your layout */
+let userName = "";
+let userEmail = "";
+const answersLog = []; // logs selected answers for the sheet
+
 const infoBox = document.getElementById("info");
 const quizBox = document.getElementById("quiz-box");
 const questionContainer = document.getElementById("question-container");
 const progressBar = document.getElementById("progress-bar");
 const resultBox = document.getElementById("result");
 
+/* Ask for name/email via prompt (so the page layout stays the same) */
+function askUserInfo() {
+  userName = (prompt("Enter your name:") || "").trim();
+  if (!userName) { alert("Name is required to start."); return false; }
+  userEmail = (prompt("Enter your email:") || "").trim();
+  const ok = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(userEmail);
+  if (!ok) { alert("Valid email is required to start."); return false; }
+  return true;
+}
+
 function startQuiz() {
+  if (!askUserInfo()) return; // collect user info once, no UI changes
   infoBox.style.display = "none";
   quizBox.style.display = "block";
   loadQuestion();
@@ -202,7 +244,6 @@ function loadQuestion() {
     showLevel();
     return;
   }
-
   let q = quizData[currentQuestion];
   questionContainer.innerHTML = `
     <div class="question">${currentQuestion + 1}. ${q.question}</div>
@@ -218,11 +259,17 @@ function checkAnswer(selected) {
     if (idx === q.correct) btn.classList.add("correct");
     else if (idx === selected) btn.classList.add("wrong");
   });
-  if (selected === q.correct) score++;
+  const correctHit = (selected === q.correct);
+  if (correctHit) score++;
+  // log the choice for Sheets
+  answersLog.push({ q: currentQuestion + 1, selected, correct: q.correct, ok: correctHit });
   nextQuestion();
 }
 
 function skipQuestion() {
+  // log skip too
+  const q = quizData[currentQuestion];
+  answersLog.push({ q: currentQuestion + 1, selected: null, correct: q.correct, ok: false, skipped: true });
   nextQuestion();
 }
 
@@ -248,11 +295,32 @@ function showLevel() {
     <button onclick="restartQuiz()">Restart Quiz</button>
   `;
   resultBox.style.display = "block";
+
+  // ===== Send result to Google Sheet (simple POST: no headers to avoid preflight) =====
+  if (SHEET_WEB_APP_URL && !SHEET_WEB_APP_URL.includes("PASTE_YOUR_WEB_APP_URL_HERE")) {
+    const payload = {
+      name: userName,
+      email: userEmail,
+      score,
+      total: quizData.length,
+      level,
+      percent: Math.round(percent),
+      answers: answersLog,
+      userAgent: navigator.userAgent,
+      ts: new Date().toISOString()
+    };
+    try {
+      fetch(SHEET_WEB_APP_URL, { method: "POST", body: JSON.stringify(payload) });
+    } catch (e) {
+      console.warn("Could not reach Sheet endpoint:", e);
+    }
+  }
 }
 
 function restartQuiz() {
   currentQuestion = 0;
   score = 0;
+  answersLog.length = 0;
   resultBox.style.display = "none";
   infoBox.style.display = "block";
   progressBar.style.width = "0%";
@@ -260,6 +328,3 @@ function restartQuiz() {
 </script>
 </body>
 </html>
-
-
-
