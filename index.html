@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ESL Placement Test</title>
+  <title>Testo-Nivelin-E-Anglishtes</title>
   <meta name="google-site-verification" content="j8wJCiLTFIvrqtx81YIfZVDvnhBW1qAJKeBwV2fFPUo" />
 
   <!-- Meta Tags in English -->
@@ -16,26 +16,26 @@
   <meta name="keywords" lang="sq" content="testo nivelin e gjuhes angleze, test vendosjeje, quiz online, nivelet e anglishtes, A1, A2, B1, B2, C1, C2">
   <meta name="author" content="Emri ose faqja juaj">
 
-  <!-- Social preview (Open Graph + Twitter) -->
-  <!-- IMPORTANT: make sure the image exists at this exact URL (case-sensitive).
-       File name has a space -> must be URL-encoded as %20 -->
-  <link rel="canonical" href="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/" />
-  <meta property="og:title" content="ESL Placement Test" />
-  <meta property="og:description" content="Free ESL Placement Test — 50 questions across A1–C2. Instant score + level." />
-  <meta property="og:url" content="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/" />
+  <!-- Social preview (Open Graph + Twitter)
+       IMPORTANT: Put 123.jpg at:
+       https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/123.jpg -->
+  <link rel="canonical" href="https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/" />
+  <meta property="og:title" content="Testo-Nivelin-E-Anglishtes" />
+  <meta property="og:description" content="Test vendosjeje A1–C2 (50 pyetje). Rezultat i menjëhershëm + nivel." />
+  <meta property="og:url" content="https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="sq_AL" />
-  <meta property="og:image" content="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/123.jpg" />
-  <meta property="og:image:secure_url" content="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/123.jpg" />
+  <meta property="og:image" content="https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/123.jpg" />
+  <meta property="og:image:secure_url" content="https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/123.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ESL Placement Test — A1 to C2" />
+  <meta property="og:image:alt" content="Testo-Nivelin-E-Anglishtes — Preview" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ESL Placement Test" />
-  <meta name="twitter:description" content="Free ESL Placement Test — 50 questions across A1–C2. Instant score + level." />
-  <meta name="twitter:image" content="https://meso-anglisht-nga-shtepia.github.io/Test-Your-Vocabulary-Power/123.jpg" />
-  <meta name="twitter:image:alt" content="ESL Placement Test — A1 to C2" />
+  <meta name="twitter:title" content="Testo-Nivelin-E-Anglishtes" />
+  <meta name="twitter:description" content="Test vendosjeje A1–C2 (50 pyetje). Rezultat i menjëhershëm + nivel." />
+  <meta name="twitter:image" content="https://meso-anglisht-nga-shtepia.github.io/Testo-Nivelin-E-Anglishtes/123.jpg" />
+  <meta name="twitter:image:alt" content="Testo-Nivelin-E-Anglishtes — Preview" />
 
   <style>
     body {
@@ -139,7 +139,7 @@
 
 <script>
 /* ====== GOOGLE SHEETS CONFIG (ADD YOUR URL) ======
-   Replace with your Apps Script Web App URL (must end with /exec) */
+   Must be your Apps Script Web App URL (ends with /exec) */
 const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz202_LPY4Na829_kVsWdT3Z7aOYVasEZ2dNei2pJGaSKQkPc1KHtO8Sdc5D_bG2L_u/exec";
 
 /* ====== QUIZ DATA (UNCHANGED) ====== */
@@ -210,10 +210,10 @@ const quizData = [
 let currentQuestion = 0;
 let score = 0;
 
-/* NEW: minimal additions to collect data without changing your layout */
+/* Collect name/email via prompt (keeps your layout unchanged) */
 let userName = "";
 let userEmail = "";
-const answersLog = []; // logs selected answers for the sheet
+const answersLog = [];
 
 const infoBox = document.getElementById("info");
 const quizBox = document.getElementById("quiz-box");
@@ -221,7 +221,6 @@ const questionContainer = document.getElementById("question-container");
 const progressBar = document.getElementById("progress-bar");
 const resultBox = document.getElementById("result");
 
-/* Ask for name/email via prompt (so the page layout stays the same) */
 function askUserInfo() {
   userName = (prompt("Enter your name:") || "").trim();
   if (!userName) { alert("Name is required to start."); return false; }
@@ -232,7 +231,7 @@ function askUserInfo() {
 }
 
 function startQuiz() {
-  if (!askUserInfo()) return; // collect user info once, no UI changes
+  if (!askUserInfo()) return;
   infoBox.style.display = "none";
   quizBox.style.display = "block";
   loadQuestion();
@@ -261,13 +260,11 @@ function checkAnswer(selected) {
   });
   const correctHit = (selected === q.correct);
   if (correctHit) score++;
-  // log the choice for Sheets
   answersLog.push({ q: currentQuestion + 1, selected, correct: q.correct, ok: correctHit });
   nextQuestion();
 }
 
 function skipQuestion() {
-  // log skip too
   const q = quizData[currentQuestion];
   answersLog.push({ q: currentQuestion + 1, selected: null, correct: q.correct, ok: false, skipped: true });
   nextQuestion();
@@ -296,8 +293,8 @@ function showLevel() {
   `;
   resultBox.style.display = "block";
 
-  // ===== Send result to Google Sheet (simple POST: no headers to avoid preflight) =====
-  if (SHEET_WEB_APP_URL && !SHEET_WEB_APP_URL.includes("PASTE_YOUR_WEB_APP_URL_HERE")) {
+  // Send to Google Sheet via Apps Script Web App (simple POST → no headers)
+  if (SHEET_WEB_APP_URL) {
     const payload = {
       name: userName,
       email: userEmail,
@@ -328,5 +325,3 @@ function restartQuiz() {
 </script>
 </body>
 </html>
-
-
